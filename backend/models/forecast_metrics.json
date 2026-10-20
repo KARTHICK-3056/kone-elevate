@@ -1,0 +1,312 @@
+{
+  "model": "WeibullAFT",
+  "model_version": "WeibullAFT-v1.0-synthetic",
+  "trained_at": "2026-09-24T21:14:30+00:00",
+  "data_source": "synthetic",
+  "data_provenance": "generated (10,000 records) and saved to C:\\Users\\divye\\Desktop\\Kone\\kone-elevate windows\\kone-elevate\\kone-elevate\\backend\\data\\synthetic\\survival.csv",
+  "total_records": 10000,
+  "training_records": 7500,
+  "test_records": 2500,
+  "event_rate": 0.6268,
+  "censoring_rate": 0.3732,
+  "horizons_months": [
+    3,
+    6,
+    12,
+    24
+  ],
+  "fit": {
+    "shape_k": 1.5484,
+    "shape_interpretation": "k > 1: hazard increases with age (wear-out), which is what a degrading mechanical component should look like",
+    "converged": true,
+    "max_gradient": 1.5e-08,
+    "log_likelihood": -7065.058,
+    "n_observations": 7500,
+    "n_events": 4701,
+    "censoring_rate": 0.3732,
+    "coefficients": {
+      "intercept": {
+        "value": 1.83613,
+        "std_error": 0.02503
+      },
+      "component_type_Steel Rope": {
+        "value": -2.01369,
+        "std_error": 0.03564
+      },
+      "component_type_Brake": {
+        "value": -1.33922,
+        "std_error": 0.03324
+      },
+      "component_type_Governor": {
+        "value": -1.80544,
+        "std_error": 0.04174
+      },
+      "component_type_Door Operator": {
+        "value": -0.85394,
+        "std_error": 0.05832
+      },
+      "component_type_Sheave": {
+        "value": 0.90372,
+        "std_error": 0.05278
+      },
+      "material_Cast Iron": {
+        "value": -0.01931,
+        "std_error": 0.02796
+      },
+      "material_Aluminum": {
+        "value": 0.00631,
+        "std_error": 0.03809
+      },
+      "material_Copper": {
+        "value": 0.02606,
+        "std_error": 0.04948
+      },
+      "material_Composite": {
+        "value": -0.01816,
+        "std_error": 0.0397
+      },
+      "component_age": {
+        "value": 0.23709,
+        "std_error": 0.0246
+      },
+      "operating_hours": {
+        "value": -0.52878,
+        "std_error": 0.02563
+      },
+      "load_cycles": {
+        "value": -0.14708,
+        "std_error": 0.02155
+      },
+      "average_load": {
+        "value": -0.23535,
+        "std_error": 0.02025
+      },
+      "vibration": {
+        "value": -0.39829,
+        "std_error": 0.01092
+      },
+      "temperature": {
+        "value": -0.15582,
+        "std_error": 0.01193
+      },
+      "service_count": {
+        "value": 0.1387,
+        "std_error": 0.01811
+      },
+      "repair_count": {
+        "value": -0.02173,
+        "std_error": 0.011
+      },
+      "failure_history": {
+        "value": -0.03636,
+        "std_error": 0.01004
+      },
+      "inspection_score": {
+        "value": 0.26973,
+        "std_error": 0.01121
+      },
+      "days_since_last_service": {
+        "value": -0.01377,
+        "std_error": 0.01104
+      }
+    },
+    "note": "AFT coefficients act on log(time): a positive coefficient means a longer time to threshold for a higher feature value."
+  },
+  "backtest": {
+    "method": "Predicted expected event count (sum of per-component probabilities) vs. observed events, on the held-out split. Only rows whose follow-up window covers the horizon are scored, so a censored row is never silently counted as a non-event.",
+    "by_horizon": [
+      {
+        "horizon_months": 3,
+        "scored_records": 2500,
+        "predicted_events": 144.2,
+        "actual_events": 205,
+        "absolute_percentage_error": 29.66,
+        "by_component_type": {
+          "Brake": {
+            "predicted_events": 24.8,
+            "actual_events": 33,
+            "absolute_percentage_error": 24.98,
+            "scored_records": 354
+          },
+          "Door Operator": {
+            "predicted_events": 30.7,
+            "actual_events": 38,
+            "absolute_percentage_error": 19.34,
+            "scored_records": 525
+          },
+          "Governor": {
+            "predicted_events": 12.5,
+            "actual_events": 23,
+            "absolute_percentage_error": 45.51,
+            "scored_records": 252
+          },
+          "Motor": {
+            "predicted_events": 12.7,
+            "actual_events": 20,
+            "absolute_percentage_error": 36.35,
+            "scored_records": 472
+          },
+          "Sheave": {
+            "predicted_events": 6.1,
+            "actual_events": 4,
+            "absolute_percentage_error": 51.65,
+            "scored_records": 355
+          },
+          "Steel Rope": {
+            "predicted_events": 57.5,
+            "actual_events": 87,
+            "absolute_percentage_error": 33.96,
+            "scored_records": 542
+          }
+        }
+      },
+      {
+        "horizon_months": 6,
+        "scored_records": 2500,
+        "predicted_events": 359.4,
+        "actual_events": 387,
+        "absolute_percentage_error": 7.13,
+        "by_component_type": {
+          "Brake": {
+            "predicted_events": 63.5,
+            "actual_events": 66,
+            "absolute_percentage_error": 3.85,
+            "scored_records": 354
+          },
+          "Door Operator": {
+            "predicted_events": 72.8,
+            "actual_events": 60,
+            "absolute_percentage_error": 21.29,
+            "scored_records": 525
+          },
+          "Governor": {
+            "predicted_events": 33.7,
+            "actual_events": 55,
+            "absolute_percentage_error": 38.7,
+            "scored_records": 252
+          },
+          "Motor": {
+            "predicted_events": 32.9,
+            "actual_events": 40,
+            "absolute_percentage_error": 17.71,
+            "scored_records": 472
+          },
+          "Sheave": {
+            "predicted_events": 15.8,
+            "actual_events": 13,
+            "absolute_percentage_error": 21.59,
+            "scored_records": 355
+          },
+          "Steel Rope": {
+            "predicted_events": 140.7,
+            "actual_events": 153,
+            "absolute_percentage_error": 8.01,
+            "scored_records": 542
+          }
+        }
+      },
+      {
+        "horizon_months": 12,
+        "scored_records": 2291,
+        "predicted_events": 709.9,
+        "actual_events": 655,
+        "absolute_percentage_error": 8.38,
+        "by_component_type": {
+          "Brake": {
+            "predicted_events": 127.4,
+            "actual_events": 117,
+            "absolute_percentage_error": 8.89,
+            "scored_records": 320
+          },
+          "Door Operator": {
+            "predicted_events": 136.1,
+            "actual_events": 114,
+            "absolute_percentage_error": 19.42,
+            "scored_records": 478
+          },
+          "Governor": {
+            "predicted_events": 73.9,
+            "actual_events": 75,
+            "absolute_percentage_error": 1.49,
+            "scored_records": 230
+          },
+          "Motor": {
+            "predicted_events": 73.0,
+            "actual_events": 70,
+            "absolute_percentage_error": 4.22,
+            "scored_records": 439
+          },
+          "Sheave": {
+            "predicted_events": 35.4,
+            "actual_events": 32,
+            "absolute_percentage_error": 10.72,
+            "scored_records": 327
+          },
+          "Steel Rope": {
+            "predicted_events": 264.1,
+            "actual_events": 247,
+            "absolute_percentage_error": 6.93,
+            "scored_records": 497
+          }
+        }
+      },
+      {
+        "horizon_months": 24,
+        "scored_records": 1818,
+        "predicted_events": 973.1,
+        "actual_events": 947,
+        "absolute_percentage_error": 2.75,
+        "by_component_type": {
+          "Brake": {
+            "predicted_events": 171.0,
+            "actual_events": 163,
+            "absolute_percentage_error": 4.92,
+            "scored_records": 257
+          },
+          "Door Operator": {
+            "predicted_events": 184.7,
+            "actual_events": 178,
+            "absolute_percentage_error": 3.76,
+            "scored_records": 366
+          },
+          "Governor": {
+            "predicted_events": 109.1,
+            "actual_events": 111,
+            "absolute_percentage_error": 1.72,
+            "scored_records": 178
+          },
+          "Motor": {
+            "predicted_events": 125.6,
+            "actual_events": 120,
+            "absolute_percentage_error": 4.7,
+            "scored_records": 352
+          },
+          "Sheave": {
+            "predicted_events": 60.1,
+            "actual_events": 58,
+            "absolute_percentage_error": 3.6,
+            "scored_records": 260
+          },
+          "Steel Rope": {
+            "predicted_events": 322.6,
+            "actual_events": 317,
+            "absolute_percentage_error": 1.75,
+            "scored_records": 405
+          }
+        }
+      }
+    ],
+    "mape_by_component_type": {
+      "Brake": 10.66,
+      "Door Operator": 15.95,
+      "Governor": 21.86,
+      "Motor": 15.74,
+      "Sheave": 21.89,
+      "Steel Rope": 12.66
+    },
+    "mape_overall": 16.46
+  },
+  "sklearn_version": "1.9.1",
+  "python_version": "3.13.7",
+  "disclaimer": "Forecasts are derived from synthetic degradation data. They describe the simulator's wear physics, not observed KONE removals."
+}

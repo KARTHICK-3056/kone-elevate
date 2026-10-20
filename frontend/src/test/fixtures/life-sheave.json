@@ -1,0 +1,832 @@
+{
+  "component_id": "KE-SHE-000003",
+  "material_profile": {
+    "supported": true,
+    "primary_material": "Cast Iron",
+    "grade": "grey_iron",
+    "grade_label": "Grey (lamellar graphite) cast iron, EN-GJL (industry standard - assumed, not recorded)",
+    "grade_provenance": "industry_default",
+    "grade_note": "No grade is recorded for this component, so the industry-standard grade for Cast Iron is assumed. Where more than one grade is possible, the assumed one is the shortest-lived, so the assumption cannot overstate this component's life. Record the actual grade from the nameplate or bill of materials to replace it.",
+    "life_factor": 0.8,
+    "life_reasoning": "Softer grooves wear faster under the same rope pressure, and flake graphite makes the body less fatigue-tolerant.",
+    "constituents": [
+      {
+        "name": "Grey cast iron",
+        "mass_fraction": 0.95,
+        "role": "Sheave body and grooves",
+        "separable": false
+      },
+      {
+        "name": "Steel hub / bearing seat",
+        "mass_fraction": 0.04,
+        "role": "Mounting",
+        "separable": true
+      },
+      {
+        "name": "Paint / corrosion protection",
+        "mass_fraction": 0.01,
+        "role": "Surface protection",
+        "separable": false
+      }
+    ],
+    "properties": [
+      {
+        "property": "Typical hardness",
+        "value": "about 180-220 HB"
+      },
+      {
+        "property": "Dominant wear mechanism",
+        "value": "Groove wear"
+      },
+      {
+        "property": "Fatigue behaviour",
+        "value": "Lower - flake graphite concentrates stress"
+      }
+    ],
+    "material_recoverability": "High - cast iron is remelted.",
+    "alternatives": [
+      {
+        "grade": "ductile_iron",
+        "label": "Ductile (spheroidal graphite) cast iron, EN-GJS",
+        "life_factor": 1
+      },
+      {
+        "grade": "grey_iron",
+        "label": "Grey (lamellar graphite) cast iron, EN-GJL",
+        "life_factor": 0.8
+      }
+    ],
+    "basis": "Typical bill of materials for the assumed industry-standard grade - PROTOTYPE ESTIMATE, not measured on this component.",
+    "cost_comparison": {
+      "currency": "INR",
+      "currency_symbol": "Rs.",
+      "ageing_rate": 1.347,
+      "duty_basis": "this component's own usage",
+      "current_grade": "grey_iron",
+      "most_cost_effective_grade": "ductile_iron",
+      "saving_per_year": 360.81,
+      "summary": "Replacing it with Ductile (spheroidal graphite) cast iron would cost Rs. 361 less per year of service (6%) than the current grade. The cheapest to buy, Grey (lamellar graphite) cast iron, costs more per year because it is replaced sooner.",
+      "options": [
+        {
+          "grade": "ductile_iron",
+          "label": "Ductile (spheroidal graphite) cast iron",
+          "designation": "EN-GJS-600-3",
+          "materials": [
+            "Cast Iron"
+          ],
+          "life_factor": 1,
+          "part_price": 88000,
+          "fitting_cost": 30000,
+          "expected_life_years": 20.8,
+          "cost_per_year": 5676.64,
+          "current": false,
+          "most_cost_effective": true,
+          "lowest_price": false,
+          "extra_per_year_vs_best": 0
+        },
+        {
+          "grade": "hardened_steel",
+          "label": "Steel with induction-hardened grooves",
+          "designation": "42CrMo4+QT",
+          "materials": [
+            "Steel"
+          ],
+          "life_factor": 1.3,
+          "part_price": 127600,
+          "fitting_cost": 30000,
+          "expected_life_years": 27,
+          "cost_per_year": 5832.07,
+          "current": false,
+          "most_cost_effective": false,
+          "lowest_price": false,
+          "extra_per_year_vs_best": 155.43
+        },
+        {
+          "grade": "grey_iron",
+          "label": "Grey (lamellar graphite) cast iron",
+          "designation": "EN-GJL-250",
+          "materials": [
+            "Cast Iron"
+          ],
+          "life_factor": 0.8,
+          "part_price": 70400,
+          "fitting_cost": 30000,
+          "expected_life_years": 16.6,
+          "cost_per_year": 6037.45,
+          "current": true,
+          "most_cost_effective": false,
+          "lowest_price": true,
+          "extra_per_year_vs_best": 360.81
+        }
+      ],
+      "basis": "PROTOTYPE ESTIMATE. Cost per year of service = (part price + fitting cost) / expected life. Part prices are illustrative ratios of the reference-grade price and fitting costs are illustrative; expected life is each grade's design life at this component's ageing rate. Energy use, downtime beyond fitting and end-of-life recovery value are not included. Replace with supplier quotes before quoting a saving."
+    }
+  },
+  "life_assessment": {
+    "supported": true,
+    "available": true,
+    "component_type": "Sheave",
+    "mechanism": "Groove wear from rope creep and slip (Archard wear)",
+    "calendar_age_years": 29.5,
+    "effective_age_years": 22.06,
+    "ageing_rate": 0.84,
+    "ageing_rate_uncapped": 0.84,
+    "historical_ageing_rate": 0.748,
+    "readings_in_history": 13,
+    "base_design_life_years": 28,
+    "material_factor": 0.8,
+    "design_life_years": 22.4,
+    "life_consumed": {
+      "governing": 0.9848,
+      "usage_model": 0.9848,
+      "inspection": 1.3063,
+      "governed_by": "usage_model",
+      "divergence_note": "The inspection shows more wear than the usage explains. Look for a cause the counters cannot see - misalignment, contamination, an installation fault - before trusting the projection."
+    },
+    "band": "red",
+    "status": {
+      "level": "ACT",
+      "message": "Over 80% of its expected life is used (replace band). Schedule replacement at the next planned visit."
+    },
+    "projection": {
+      "years_to_half_life": 0,
+      "years_to_replace_band": 0,
+      "years_to_end_of_life": 0.41,
+      "half_life_date": "2026-09-24",
+      "replace_band_date": "2026-09-24",
+      "end_of_life_date": "2027-02-19",
+      "projected_total_life_years": 29.9,
+      "design_total_life_years": 22.4,
+      "life_change_years": 7.5,
+      "assumption": "Past wear uses lifetime usage and the readings history; the projection assumes today's conditions continue."
+    },
+    "thresholds": {
+      "suitable_limit": 0.5,
+      "replace_limit": 0.8,
+      "end_of_life": 1
+    },
+    "factors": [
+      {
+        "key": "duty",
+        "label": "Usage intensity (cycles and running hours)",
+        "multiplier": 0.702,
+        "observed": "47,709 cycles/yr, 2,362 h/yr",
+        "reference": "67,857 cycles/yr, 3,393 h/yr at design duty",
+        "explanation": "Weighted 80% cycles / 19% hours for this mechanism. 0.70x design duty.",
+        "inputs": [
+          "load_cycles",
+          "operating_hours"
+        ],
+        "provenance": "measured",
+        "history_multiplier": 0.702,
+        "sources": [
+          {
+            "field": "load_cycles",
+            "kone_source": "Equipment API movement events - one journey counted as one cycle, apportioned per component",
+            "availability": "published_api"
+          },
+          {
+            "field": "operating_hours",
+            "kone_source": "Equipment API movement durationSeconds x journeys observed",
+            "availability": "published_api"
+          }
+        ]
+      },
+      {
+        "key": "load",
+        "label": "Load carried",
+        "multiplier": 0.932,
+        "observed": "1,167 kg (65% of rated)",
+        "reference": "70% of rated load (1,800 kg rated) - the fleet's typical duty",
+        "explanation": "(load ratio)^1.0. Archard's law: wear volume is proportional to contact pressure, so exponent 1.",
+        "inputs": [
+          "average_load"
+        ],
+        "provenance": "measured",
+        "history_multiplier": 0.932,
+        "sources": [
+          {
+            "field": "average_load",
+            "kone_source": "Equipment API decks[].loadPercentage (percent of rated load)",
+            "availability": "published_api"
+          }
+        ]
+      },
+      {
+        "key": "thermal",
+        "label": "Operating temperature",
+        "multiplier": 1,
+        "observed": "60 C",
+        "reference": "not a dominant mechanism",
+        "explanation": "Temperature is not a dominant sheave wear mechanism.",
+        "inputs": [
+          "temperature"
+        ],
+        "provenance": "not_applicable",
+        "history_multiplier": 1,
+        "sources": [
+          {
+            "field": "temperature",
+            "kone_source": "No channel in the published KONE API. KONE's connected-services sensor data is not exposed publicly - needs a data-sharing agreement or a retrofit sensor",
+            "availability": "not_published"
+          }
+        ]
+      },
+      {
+        "key": "vibration",
+        "label": "Vibration",
+        "multiplier": 1.241,
+        "observed": "5.9 mm/s (90% of limit)",
+        "reference": "accelerates above 60% of the 6.5 mm/s limit",
+        "explanation": "Sustained vibration indicates misalignment or bearing distress, which loads the wear surfaces unevenly.",
+        "inputs": [
+          "vibration"
+        ],
+        "provenance": "measured",
+        "history_multiplier": 1.075,
+        "sources": [
+          {
+            "field": "vibration",
+            "kone_source": "No channel in the published KONE API - same situation as temperature",
+            "availability": "not_published"
+          }
+        ]
+      },
+      {
+        "key": "maintenance",
+        "label": "Maintenance regularity",
+        "multiplier": 1,
+        "observed": "39 days since last service",
+        "reference": "service every 263 days (typical for the fleet)",
+        "explanation": "Missed lubrication and adjustment speed wear up. +25% per year overdue, capped at two years.",
+        "inputs": [
+          "days_since_last_service"
+        ],
+        "provenance": "measured",
+        "history_multiplier": 1,
+        "sources": [
+          {
+            "field": "days_since_last_service",
+            "kone_source": "Service Info API service orders - finishedDateTime of the latest order",
+            "availability": "published_api"
+          }
+        ]
+      }
+    ],
+    "implication": {
+      "recommendation": "MATERIAL_RECOVERY",
+      "label": "Material Recovery",
+      "reason": "The component and its parts are no longer suitable for use. Recover useful material from the end-of-life component through the appropriate process.",
+      "material_recoverability": "Cast Iron is a recoverable material stream.",
+      "safety_gate": false,
+      "ai_recommendation": "MATERIAL_RECOVERY",
+      "agrees_with_ai": true
+    },
+    "discard_criteria": [
+      "Groove profile worn beyond the gauge (loss of traction / undercut)",
+      "Uneven groove depth between grooves (rope load sharing)",
+      "Cracks in the rim or spokes"
+    ],
+    "trajectory": [
+      {
+        "years_in_service": 0,
+        "year": 1997.23,
+        "design": 0,
+        "actual": 0,
+        "projected": null
+      },
+      {
+        "years_in_service": 0.656,
+        "year": 1997.89,
+        "design": 2.93,
+        "actual": 2.19,
+        "projected": null
+      },
+      {
+        "years_in_service": 1.312,
+        "year": 1998.54,
+        "design": 5.86,
+        "actual": 4.38,
+        "projected": null
+      },
+      {
+        "years_in_service": 1.969,
+        "year": 1999.2,
+        "design": 8.79,
+        "actual": 6.57,
+        "projected": null
+      },
+      {
+        "years_in_service": 2.625,
+        "year": 1999.85,
+        "design": 11.72,
+        "actual": 8.76,
+        "projected": null
+      },
+      {
+        "years_in_service": 3.281,
+        "year": 2000.51,
+        "design": 14.65,
+        "actual": 10.95,
+        "projected": null
+      },
+      {
+        "years_in_service": 3.937,
+        "year": 2001.17,
+        "design": 17.58,
+        "actual": 13.14,
+        "projected": null
+      },
+      {
+        "years_in_service": 4.593,
+        "year": 2001.82,
+        "design": 20.5,
+        "actual": 15.33,
+        "projected": null
+      },
+      {
+        "years_in_service": 5.25,
+        "year": 2002.48,
+        "design": 23.44,
+        "actual": 17.53,
+        "projected": null
+      },
+      {
+        "years_in_service": 5.906,
+        "year": 2003.14,
+        "design": 26.37,
+        "actual": 19.72,
+        "projected": null
+      },
+      {
+        "years_in_service": 6.562,
+        "year": 2003.79,
+        "design": 29.29,
+        "actual": 21.91,
+        "projected": null
+      },
+      {
+        "years_in_service": 7.218,
+        "year": 2004.45,
+        "design": 32.22,
+        "actual": 24.1,
+        "projected": null
+      },
+      {
+        "years_in_service": 7.874,
+        "year": 2005.1,
+        "design": 35.15,
+        "actual": 26.29,
+        "projected": null
+      },
+      {
+        "years_in_service": 8.531,
+        "year": 2005.76,
+        "design": 38.08,
+        "actual": 28.48,
+        "projected": null
+      },
+      {
+        "years_in_service": 9.187,
+        "year": 2006.42,
+        "design": 41.01,
+        "actual": 30.67,
+        "projected": null
+      },
+      {
+        "years_in_service": 9.843,
+        "year": 2007.07,
+        "design": 43.94,
+        "actual": 32.86,
+        "projected": null
+      },
+      {
+        "years_in_service": 10.499,
+        "year": 2007.73,
+        "design": 46.87,
+        "actual": 35.05,
+        "projected": null
+      },
+      {
+        "years_in_service": 11.155,
+        "year": 2008.38,
+        "design": 49.8,
+        "actual": 37.24,
+        "projected": null
+      },
+      {
+        "years_in_service": 11.812,
+        "year": 2009.04,
+        "design": 52.73,
+        "actual": 39.43,
+        "projected": null
+      },
+      {
+        "years_in_service": 12.468,
+        "year": 2009.7,
+        "design": 55.66,
+        "actual": 41.62,
+        "projected": null
+      },
+      {
+        "years_in_service": 13.124,
+        "year": 2010.35,
+        "design": 58.59,
+        "actual": 43.82,
+        "projected": null
+      },
+      {
+        "years_in_service": 13.78,
+        "year": 2011.01,
+        "design": 61.52,
+        "actual": 46.01,
+        "projected": null
+      },
+      {
+        "years_in_service": 14.436,
+        "year": 2011.67,
+        "design": 64.45,
+        "actual": 48.2,
+        "projected": null
+      },
+      {
+        "years_in_service": 15.093,
+        "year": 2012.32,
+        "design": 67.38,
+        "actual": 50.39,
+        "projected": null
+      },
+      {
+        "years_in_service": 15.749,
+        "year": 2012.98,
+        "design": 70.31,
+        "actual": 52.58,
+        "projected": null
+      },
+      {
+        "years_in_service": 16.405,
+        "year": 2013.63,
+        "design": 73.24,
+        "actual": 54.77,
+        "projected": null
+      },
+      {
+        "years_in_service": 17.061,
+        "year": 2014.29,
+        "design": 76.17,
+        "actual": 56.96,
+        "projected": null
+      },
+      {
+        "years_in_service": 17.717,
+        "year": 2014.95,
+        "design": 79.09,
+        "actual": 59.15,
+        "projected": null
+      },
+      {
+        "years_in_service": 18.374,
+        "year": 2015.6,
+        "design": 82.03,
+        "actual": 61.34,
+        "projected": null
+      },
+      {
+        "years_in_service": 19.03,
+        "year": 2016.26,
+        "design": 84.96,
+        "actual": 63.53,
+        "projected": null
+      },
+      {
+        "years_in_service": 19.686,
+        "year": 2016.92,
+        "design": 87.88,
+        "actual": 65.72,
+        "projected": null
+      },
+      {
+        "years_in_service": 20.342,
+        "year": 2017.57,
+        "design": 90.81,
+        "actual": 67.91,
+        "projected": null
+      },
+      {
+        "years_in_service": 20.998,
+        "year": 2018.23,
+        "design": 93.74,
+        "actual": 70.1,
+        "projected": null
+      },
+      {
+        "years_in_service": 21.655,
+        "year": 2018.88,
+        "design": 96.67,
+        "actual": 72.3,
+        "projected": null
+      },
+      {
+        "years_in_service": 22.311,
+        "year": 2019.54,
+        "design": 99.6,
+        "actual": 74.49,
+        "projected": null
+      },
+      {
+        "years_in_service": 22.967,
+        "year": 2020.2,
+        "design": 102.53,
+        "actual": 76.68,
+        "projected": null
+      },
+      {
+        "years_in_service": 23.623,
+        "year": 2020.85,
+        "design": 105.46,
+        "actual": 78.87,
+        "projected": null
+      },
+      {
+        "years_in_service": 24.279,
+        "year": 2021.51,
+        "design": 108.39,
+        "actual": 81.06,
+        "projected": null
+      },
+      {
+        "years_in_service": 24.936,
+        "year": 2022.17,
+        "design": 111.32,
+        "actual": 83.25,
+        "projected": null
+      },
+      {
+        "years_in_service": 25.592,
+        "year": 2022.82,
+        "design": 114.25,
+        "actual": 85.44,
+        "projected": null
+      },
+      {
+        "years_in_service": 26.248,
+        "year": 2023.48,
+        "design": 117.18,
+        "actual": 87.63,
+        "projected": null
+      },
+      {
+        "years_in_service": 26.904,
+        "year": 2024.13,
+        "design": 120.11,
+        "actual": 89.82,
+        "projected": null
+      },
+      {
+        "years_in_service": 27.56,
+        "year": 2024.79,
+        "design": 123.04,
+        "actual": 92.01,
+        "projected": null
+      },
+      {
+        "years_in_service": 28.217,
+        "year": 2025.45,
+        "design": 125.97,
+        "actual": 94.2,
+        "projected": null
+      },
+      {
+        "years_in_service": 28.873,
+        "year": 2026.1,
+        "design": 128.9,
+        "actual": 96.39,
+        "projected": null
+      },
+      {
+        "years_in_service": 29.498,
+        "year": 2026.73,
+        "design": 131.69,
+        "actual": 98.48,
+        "projected": 98.48
+      },
+      {
+        "years_in_service": 29.529,
+        "year": 2026.76,
+        "design": 131.83,
+        "actual": null,
+        "projected": 98.6
+      },
+      {
+        "years_in_service": 30.185,
+        "year": 2027.41,
+        "design": 134.75,
+        "actual": null,
+        "projected": 101.06
+      },
+      {
+        "years_in_service": 30.841,
+        "year": 2028.07,
+        "design": 137.68,
+        "actual": null,
+        "projected": 103.52
+      },
+      {
+        "years_in_service": 31.498,
+        "year": 2028.73,
+        "design": 140.62,
+        "actual": null,
+        "projected": 105.98
+      }
+    ],
+    "basis": "Physics-of-failure life-consumption model (Miner's rule) with documented prototype exponents - not a KONE specification and not calibrated against real removals. Advisory only; it never overrides the safety gate."
+  },
+  "early_warning": {
+    "supported": true,
+    "component_type": "Sheave",
+    "generated_on": "2026-09-24",
+    "horizon_years": 3,
+    "lead_time_days": 75,
+    "headline": "2 limits already crossed - a current problem, inspect now.",
+    "issues": [
+      {
+        "code": "SHEAVE_GROOVE_PROFILE",
+        "title": "Groove profile worn beyond gauge",
+        "mechanism": "Falling inspection scores track groove profile loss.",
+        "predicted_date": "2026-09-24",
+        "days_until": 0,
+        "act_by": "2026-09-24",
+        "urgency": "PRESENT",
+        "present": true,
+        "confidence": 0.95,
+        "confidence_label": "HIGH",
+        "why": "Inspection score is already past its limit of 48 /100 (trend value today 27.6).",
+        "primary_evidence": "Condition trend - inspection score",
+        "evidence": {
+          "kind": "trend",
+          "indicator": "inspection_score",
+          "label": "Inspection score",
+          "unit": "/100",
+          "limit": 48,
+          "readings": [
+            {
+              "date": "2010-11-05",
+              "value": 68.7
+            },
+            {
+              "date": "2013-02-11",
+              "value": 59.8
+            },
+            {
+              "date": "2015-05-21",
+              "value": 58.7
+            },
+            {
+              "date": "2017-08-26",
+              "value": 53.4
+            },
+            {
+              "date": "2019-12-03",
+              "value": 48.4
+            },
+            {
+              "date": "2022-03-11",
+              "value": 37.3
+            },
+            {
+              "date": "2024-06-17",
+              "value": 32.2
+            },
+            {
+              "date": "2026-08-16",
+              "value": 27.8
+            }
+          ],
+          "fit": [
+            {
+              "date": "2010-11-05",
+              "value": 68.9
+            },
+            {
+              "date": "2026-09-24",
+              "value": 27.61
+            }
+          ],
+          "slope_per_year": -2.599,
+          "r2": 0.977
+        },
+        "justification": [
+          {
+            "signal": "Usage-based life model",
+            "agrees": true,
+            "detail": "98% of adjusted life used, ageing at 0.84x design; replace band already reached."
+          },
+          {
+            "signal": "AI recommendation (classifier and decision flow)",
+            "agrees": true,
+            "detail": "Current assessment: Material Recovery."
+          },
+          {
+            "signal": "Service record",
+            "agrees": true,
+            "detail": "6 repair(s) and 0 recorded failure(s) on this component."
+          }
+        ],
+        "measures": [
+          "Gauge groove depth differences between grooves",
+          "Plan re-machining or replacement"
+        ],
+        "safety_critical": false
+      },
+      {
+        "code": "SHEAVE_END_OF_LIFE",
+        "title": "Sheave reaching end of usage-adjusted life",
+        "mechanism": "At the current rate of use the sheave enters the replace band.",
+        "predicted_date": "2026-09-24",
+        "days_until": 0,
+        "act_by": "2026-09-24",
+        "urgency": "PRESENT",
+        "present": true,
+        "confidence": 0.84,
+        "confidence_label": "HIGH",
+        "why": "Ageing at 0.84x the design rate with 98% of its adjusted life used, it is already in the replace band.",
+        "primary_evidence": "Usage-adjusted life model",
+        "evidence": {
+          "kind": "life",
+          "ageing_rate": 0.84,
+          "life_consumed": 0.9848,
+          "design_life_years": 22.4,
+          "factors": [
+            {
+              "label": "Usage intensity (cycles and running hours)",
+              "multiplier": 0.702
+            },
+            {
+              "label": "Load carried",
+              "multiplier": 0.932
+            },
+            {
+              "label": "Operating temperature",
+              "multiplier": 1
+            },
+            {
+              "label": "Vibration",
+              "multiplier": 1.241
+            },
+            {
+              "label": "Maintenance regularity",
+              "multiplier": 1
+            }
+          ]
+        },
+        "justification": [
+          {
+            "signal": "AI recommendation (classifier and decision flow)",
+            "agrees": true,
+            "detail": "Current assessment: Material Recovery."
+          },
+          {
+            "signal": "Service record",
+            "agrees": true,
+            "detail": "6 repair(s) and 0 recorded failure(s) on this component."
+          }
+        ],
+        "measures": [
+          "Order a replacement sheave; replace ropes at the same visit if they are also due"
+        ],
+        "safety_critical": false
+      }
+    ],
+    "indicators": [
+      {
+        "indicator": "vibration",
+        "label": "Vibration",
+        "unit": "mm/s",
+        "limit": 6.5,
+        "points": 8,
+        "issue": "Groove wear / sheave misalignment",
+        "current": 5.86,
+        "slope_per_year": 0.106,
+        "r2": 0.914,
+        "status": "worsening_beyond_horizon",
+        "years_until": 6.1
+      },
+      {
+        "indicator": "inspection_score",
+        "label": "Inspection score",
+        "unit": "/100",
+        "limit": 48,
+        "points": 8,
+        "issue": "Groove profile worn beyond gauge",
+        "current": 27.61,
+        "slope_per_year": -2.599,
+        "r2": 0.977,
+        "status": "exceeded",
+        "years_until": 0
+      }
+    ],
+    "safety_critical": false,
+    "method": "Condition trends (least-squares over up to the last 8 service readings) extrapolated to each indicator's limit, plus the usage-adjusted life milestone. Confidence blends trend fit quality with agreement from independent signals. PROTOTYPE - synthetic service history; advisory only, it never replaces an inspection."
+  },
+  "scenarios": []
+}

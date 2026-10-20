@@ -1,0 +1,26 @@
+[
+  {
+    "record_id": "SR-0001",
+    "equipment_id": "EQ-CHN-0001",
+    "event_type": "PREVENTIVE_MAINTENANCE",
+    "performed_at": "2026-06-01T09:15:00Z",
+    "technician_reference": "TECH-1042",
+    "notes": "Routine inspection, no anomalies."
+  },
+  {
+    "record_id": "SR-0002",
+    "equipment_id": "EQ-CHN-0001",
+    "event_type": "CALLOUT_REPAIR",
+    "performed_at": "2026-04-18T14:30:00Z",
+    "technician_reference": "TECH-1042",
+    "notes": "Door sensor replaced."
+  },
+  {
+    "record_id": "SR-0003",
+    "equipment_id": "EQ-CHN-0002",
+    "event_type": "MODERNIZATION_ASSESSMENT",
+    "performed_at": "2026-05-22T11:00:00Z",
+    "technician_reference": "TECH-2098",
+    "notes": "Governor and steel rope flagged for replacement ahead of modernization."
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "model_version": "RF-v1.0-synthetic",
+  "trained_at": "2026-09-24T21:13:52+00:00",
+  "data_source": "synthetic",
+  "feature_importance": {
+    "material": 0.237065,
+    "inspection_score": 0.151112,
+    "component_type": 0.128447,
+    "operating_hours": 0.103565,
+    "load_cycles": 0.099044,
+    "vibration": 0.072538,
+    "component_age": 0.056431,
+    "temperature": 0.044407,
+    "average_load": 0.043214,
+    "service_count": 0.023101,
+    "days_since_last_service": 0.01692,
+    "repair_count": 0.016096,
+    "failure_history": 0.008062
+  },
+  "permutation_importance": {
+    "material": 0.421283,
+    "component_type": 0.239458,
+    "inspection_score": 0.139316,
+    "operating_hours": 0.070909,
+    "load_cycles": 0.048478,
+    "vibration": 0.044675,
+    "temperature": 0.018608,
+    "component_age": 0.006292,
+    "repair_count": 0.004536,
+    "average_load": 0.004278,
+    "days_since_last_service": 0.002167,
+    "service_count": 0.0,
+    "failure_history": 0.0
+  },
+  "shap_importance": {
+    "material": 0.251637,
+    "component_type": 0.199594,
+    "inspection_score": 0.158981,
+    "operating_hours": 0.100999,
+    "load_cycles": 0.084978,
+    "vibration": 0.062242,
+    "component_age": 0.040704,
+    "temperature": 0.03592,
+    "average_load": 0.026621,
+    "repair_count": 0.01256,
+    "service_count": 0.011536,
+    "failure_history": 0.007773,
+    "days_since_last_service": 0.006453
+  }
+}

@@ -1,0 +1,16 @@
+target-version = "py312"
+line-length = 110
+exclude = [".venv", "alembic/versions"]
+
+[lint]
+# E/F: pyflakes + pycodestyle errors (real bugs). I: import sorting.
+# B: flake8-bugbear (real bug patterns), with the one FastAPI-specific
+# false positive (B008, `Depends(...)` as a default argument is the
+# framework's own documented pattern) turned off.
+select = ["E", "F", "I", "B"]
+ignore = [
+    "B008",  # FastAPI's Depends()/Query() default-argument pattern
+]
+
+[lint.per-file-ignores]
+"tests/*" = ["B008"]

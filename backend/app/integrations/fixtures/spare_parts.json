@@ -1,0 +1,23 @@
+[
+  {
+    "part_number": "KE-GOV-STD-01",
+    "description": "Standard overspeed governor",
+    "available_quantity": 4,
+    "warehouse_code": "WH-CHN",
+    "lead_time_days": 3
+  },
+  {
+    "part_number": "KE-ROPE-8MM",
+    "description": "8mm steel wire rope, 50m coil",
+    "available_quantity": 0,
+    "warehouse_code": "WH-CHN",
+    "lead_time_days": 14
+  },
+  {
+    "part_number": "KE-BRK-STD-02",
+    "description": "Standard disc brake assembly",
+    "available_quantity": 11,
+    "warehouse_code": "WH-BLR",
+    "lead_time_days": 2
+  }
+]

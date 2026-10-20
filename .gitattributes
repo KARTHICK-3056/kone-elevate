@@ -1,0 +1,20 @@
+# Normalise line endings so a Windows checkout (core.autocrlf=true) still
+# builds: shell scripts, Dockerfiles and nginx.conf run inside Linux
+# containers, where a CRLF breaks the shebang and the parser.
+*.sh            text eol=lf
+Dockerfile      text eol=lf
+*.dockerignore  text eol=lf
+nginx.conf      text eol=lf
+# cmd.exe misparses batch files with LF-only endings.
+*.cmd           text eol=crlf
+*.bat           text eol=crlf
+*.ps1           text eol=crlf
+
+*.png   binary
+*.jpg   binary
+*.ico   binary
+*.joblib binary
+*.db    binary
+
+# Committed datasets: byte-identical on every OS.
+*.csv           text eol=lf

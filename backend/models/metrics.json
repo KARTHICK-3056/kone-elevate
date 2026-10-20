@@ -1,0 +1,330 @@
+{
+  "accuracy": 0.871,
+  "precision_macro": 0.864,
+  "recall_macro": 0.8647,
+  "f1_macro": 0.8643,
+  "f1_weighted": 0.8707,
+  "per_class": {
+    "CONTINUE_USING": {
+      "precision": 0.7848,
+      "recall": 0.8043,
+      "f1": 0.7945,
+      "support": 322
+    },
+    "COMPONENT_RECOVERY": {
+      "precision": 0.7766,
+      "recall": 0.7561,
+      "f1": 0.7662,
+      "support": 492
+    },
+    "MATERIAL_RECOVERY": {
+      "precision": 0.9314,
+      "recall": 0.9355,
+      "f1": 0.9335,
+      "support": 1132
+    },
+    "DISPOSE": {
+      "precision": 0.963,
+      "recall": 0.963,
+      "f1": 0.963,
+      "support": 54
+    }
+  },
+  "labels": [
+    "CONTINUE_USING",
+    "COMPONENT_RECOVERY",
+    "MATERIAL_RECOVERY",
+    "DISPOSE"
+  ],
+  "confusion_matrix": [
+    [
+      259,
+      48,
+      15,
+      0
+    ],
+    [
+      55,
+      372,
+      63,
+      2
+    ],
+    [
+      16,
+      57,
+      1059,
+      0
+    ],
+    [
+      0,
+      2,
+      0,
+      52
+    ]
+  ],
+  "test_records": 2000,
+  "mean_confidence": 0.872,
+  "mean_confidence_correct": 0.8932,
+  "mean_confidence_incorrect": 0.7291,
+  "training_records": 6400,
+  "conformal_calibration_records": 1600,
+  "total_records": 10000,
+  "class_distribution": {
+    "MATERIAL_RECOVERY": 5660,
+    "COMPONENT_RECOVERY": 2460,
+    "CONTINUE_USING": 1612,
+    "DISPOSE": 268
+  },
+  "data_provenance": "loaded from C:\\Users\\divye\\Desktop\\Kone\\kone-elevate windows\\kone-elevate\\kone-elevate\\backend\\data\\synthetic\\dataset.csv",
+  "data_source": "synthetic",
+  "hyperparameters": {
+    "n_estimators": 400,
+    "max_depth": 16,
+    "min_samples_split": 8,
+    "min_samples_leaf": 3,
+    "max_features": "sqrt",
+    "class_weight": "balanced_subsample",
+    "n_jobs": -1,
+    "random_state": 42
+  },
+  "feature_columns": [
+    "component_type",
+    "material",
+    "component_age",
+    "operating_hours",
+    "load_cycles",
+    "average_load",
+    "vibration",
+    "temperature",
+    "service_count",
+    "repair_count",
+    "failure_history",
+    "inspection_score",
+    "days_since_last_service"
+  ],
+  "sklearn_version": "1.9.1",
+  "python_version": "3.13.7",
+  "calibration_method": "isotonic",
+  "calibration_cv_folds": 5,
+  "cv_f1_macro_mean": 0.8501,
+  "cv_f1_macro_std": 0.0052,
+  "cv_folds": 5,
+  "brier_score_per_class": {
+    "COMPONENT_RECOVERY": 0.0823,
+    "CONTINUE_USING": 0.047,
+    "DISPOSE": 0.002,
+    "MATERIAL_RECOVERY": 0.059
+  },
+  "calibration": {
+    "expected_calibration_error": 0.0151,
+    "n_bins": 10,
+    "bins": [
+      {
+        "bin_low": 0.0,
+        "bin_high": 0.1,
+        "count": 0,
+        "mean_confidence": null,
+        "observed_accuracy": null
+      },
+      {
+        "bin_low": 0.1,
+        "bin_high": 0.2,
+        "count": 0,
+        "mean_confidence": null,
+        "observed_accuracy": null
+      },
+      {
+        "bin_low": 0.2,
+        "bin_high": 0.3,
+        "count": 0,
+        "mean_confidence": null,
+        "observed_accuracy": null
+      },
+      {
+        "bin_low": 0.3,
+        "bin_high": 0.4,
+        "count": 0,
+        "mean_confidence": null,
+        "observed_accuracy": null
+      },
+      {
+        "bin_low": 0.4,
+        "bin_high": 0.5,
+        "count": 12,
+        "mean_confidence": 0.485,
+        "observed_accuracy": 0.3333
+      },
+      {
+        "bin_low": 0.5,
+        "bin_high": 0.6,
+        "count": 136,
+        "mean_confidence": 0.5453,
+        "observed_accuracy": 0.5809
+      },
+      {
+        "bin_low": 0.6,
+        "bin_high": 0.7,
+        "count": 149,
+        "mean_confidence": 0.6526,
+        "observed_accuracy": 0.6644
+      },
+      {
+        "bin_low": 0.7,
+        "bin_high": 0.8,
+        "count": 180,
+        "mean_confidence": 0.749,
+        "observed_accuracy": 0.6889
+      },
+      {
+        "bin_low": 0.8,
+        "bin_high": 0.9,
+        "count": 340,
+        "mean_confidence": 0.8573,
+        "observed_accuracy": 0.8794
+      },
+      {
+        "bin_low": 0.9,
+        "bin_high": 1.0,
+        "count": 1183,
+        "mean_confidence": 0.964,
+        "observed_accuracy": 0.9611
+      }
+    ],
+    "overall_accuracy": 0.871,
+    "overall_mean_confidence": 0.872
+  },
+  "conformal": {
+    "alpha": 0.1,
+    "target_coverage": 0.9,
+    "q_hat": 0.6468,
+    "calibration_records": 1600,
+    "method": "split-conformal (LAC / Sadinle-Lei-Wasserman 2019)"
+  },
+  "abstention": {
+    "confidence_threshold": 0.5,
+    "total_records": 2000,
+    "abstained_records": 176,
+    "abstention_rate": 0.088,
+    "answered_records": 1824,
+    "accuracy_without_abstention": 0.871,
+    "accuracy_on_answered_subset": 0.9024,
+    "accuracy_on_abstained_subset_if_forced": 0.5455,
+    "note": "accuracy_on_answered_subset is the number that matters: it is the accuracy a technician actually experiences when the model does not abstain. accuracy_on_abstained_subset_if_forced shows why those cases were flagged - it is markedly lower."
+  },
+  "feature_importance": {
+    "material": 0.237065,
+    "inspection_score": 0.151112,
+    "component_type": 0.128447,
+    "operating_hours": 0.103565,
+    "load_cycles": 0.099044,
+    "vibration": 0.072538,
+    "component_age": 0.056431,
+    "temperature": 0.044407,
+    "average_load": 0.043214,
+    "service_count": 0.023101,
+    "days_since_last_service": 0.01692,
+    "repair_count": 0.016096,
+    "failure_history": 0.008062
+  },
+  "permutation_importance": {
+    "material": 0.421283,
+    "component_type": 0.239458,
+    "inspection_score": 0.139316,
+    "operating_hours": 0.070909,
+    "load_cycles": 0.048478,
+    "vibration": 0.044675,
+    "temperature": 0.018608,
+    "component_age": 0.006292,
+    "repair_count": 0.004536,
+    "average_load": 0.004278,
+    "days_since_last_service": 0.002167,
+    "service_count": 0.0,
+    "failure_history": 0.0
+  },
+  "shap_importance": {
+    "material": 0.251637,
+    "component_type": 0.199594,
+    "inspection_score": 0.158981,
+    "operating_hours": 0.100999,
+    "load_cycles": 0.084978,
+    "vibration": 0.062242,
+    "component_age": 0.040704,
+    "temperature": 0.03592,
+    "average_load": 0.026621,
+    "repair_count": 0.01256,
+    "service_count": 0.011536,
+    "failure_history": 0.007773,
+    "days_since_last_service": 0.006453
+  },
+  "explanation_methods": [
+    "gini",
+    "permutation",
+    "shap_treeexplainer"
+  ],
+  "cost_analysis": {
+    "cost_matrix_version": "v2",
+    "argmax_mean_expected_cost": 0.622,
+    "cost_optimal_mean_expected_cost": 0.5179,
+    "argmax_mean_realised_cost": 0.7197,
+    "cost_optimal_mean_realised_cost": 0.451,
+    "decisions_where_cost_optimal_differs_from_argmax": 102,
+    "decisions_where_cost_optimal_differs_from_argmax_percent": 5.1,
+    "labels": [
+      "CONTINUE_USING",
+      "COMPONENT_RECOVERY",
+      "MATERIAL_RECOVERY",
+      "DISPOSE"
+    ],
+    "disclaimer": "Costs are relative units reflecting error-type asymmetry (optimistic vs conservative, safety-critical vs not), not currency - see app.ml.cost_matrix."
+  },
+  "cohort_validation": {
+    "status": "ok",
+    "cutoff_installation_year": 2018,
+    "older_cohort_records": 7345,
+    "newer_cohort_records": 2655,
+    "note": "Trained on components with synthetic installation_year <= cutoff, evaluated on installation_year > cutoff. Expect these numbers to be lower than the random-split metrics - that drop is the honest signal of temporal generalisation difficulty, not a bug.",
+    "accuracy": 0.765,
+    "precision_macro": 0.7064,
+    "recall_macro": 0.8183,
+    "f1_macro": 0.7392,
+    "f1_weighted": 0.7594,
+    "per_class": {
+      "CONTINUE_USING": {
+        "precision": 0.8647,
+        "recall": 0.5979,
+        "f1": 0.707,
+        "support": 1144
+      },
+      "COMPONENT_RECOVERY": {
+        "precision": 0.6532,
+        "recall": 0.8213,
+        "f1": 0.7276,
+        "support": 649
+      },
+      "MATERIAL_RECOVERY": {
+        "precision": 0.7813,
+        "recall": 0.9448,
+        "f1": 0.8553,
+        "support": 851
+      },
+      "DISPOSE": {
+        "precision": 0.5263,
+        "recall": 0.9091,
+        "f1": 0.6667,
+        "support": 11
+      }
+    },
+    "labels": [
+      "CONTINUE_USING",
+      "COMPONENT_RECOVERY",
+      "MATERIAL_RECOVERY",
+      "DISPOSE"
+    ],
+    "test_records": 2655,
+    "mean_confidence": 0.6858,
+    "mean_confidence_correct": 0.7126,
+    "mean_confidence_incorrect": 0.5987
+  },
+  "model_version": "RF-v1.0-synthetic",
+  "trained_at": "2026-09-24T21:13:52+00:00"
+}

@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+htmlcov/
+.coverage
+*.db
+*.sqlite3
+.env
+data/processed/*.csv
+data/outbox/
+data/anchors/
+# models/ and data/synthetic/ are deliberately NOT ignored: the image
+# ships the committed, pre-trained models instead of retraining.

@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Environment
+.env
+.env.local
+*.local
+
+# Node
+node_modules/
+dist/
+dist-ssr/
+.vite/
+dev-dist/
+npm-debug.log*
+yarn-error.log*
+
+# Trained models (backend/models/) and the synthetic datasets
+# (backend/data/synthetic/) ARE committed, so a new machine runs the app
+# without retraining. They only load under the exact scikit-learn/joblib
+# versions pinned in backend/requirements.lock - retrain (`make train`) and
+# commit the new artefacts whenever those pins change.
+
+# Runtime data, specific to one machine's database
+backend/data/processed/*.csv
+backend/data/anchors/*.jsonl
+# Verification emails written locally when no SMTP server is configured.
+# These contain live one-time codes - never commit them.
+backend/data/outbox/
+backend/*.db
+backend/*.sqlite3
+*.db-journal
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Server PIDs written by setup-and-run.cmd / .\make start
+.ke-servers.json
+
+# Self-signed dev certificate for phone testing (frontend/scripts/dev-cert.mjs)
+.certs/

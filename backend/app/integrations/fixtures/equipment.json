@@ -1,0 +1,26 @@
+[
+  {
+    "equipment_id": "EQ-CHN-0001",
+    "equipment_type": "Traction Elevator",
+    "site_name": "Chennai Tech Park - Tower B",
+    "site_address": "Chennai, India",
+    "installation_date": "2015-03-12",
+    "status": "IN_SERVICE"
+  },
+  {
+    "equipment_id": "EQ-CHN-0002",
+    "equipment_type": "Traction Elevator",
+    "site_name": "Chennai Tech Park - Tower A",
+    "site_address": "Chennai, India",
+    "installation_date": "2012-07-01",
+    "status": "MODERNIZATION"
+  },
+  {
+    "equipment_id": "EQ-BLR-0001",
+    "equipment_type": "Machine-Room-Less Elevator",
+    "site_name": "Bengaluru Business Hub",
+    "site_address": "Bengaluru, India",
+    "installation_date": "2019-11-20",
+    "status": "IN_SERVICE"
+  }
+]

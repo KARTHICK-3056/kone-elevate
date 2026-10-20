@@ -1,0 +1,278 @@
+{
+  "supported": true,
+  "component_type": "Steel Rope",
+  "generated_on": "2026-09-24",
+  "horizon_years": 3.0,
+  "lead_time_days": 60,
+  "headline": "2 limits already crossed - a current problem, inspect now. 1 issue predicted ahead. Next: uneven rope tension / traction irregularity in about 23 months - act by 2028-06-11.",
+  "issues": [
+    {
+      "code": "ROPE_DISCARD_CRITERIA",
+      "title": "Rope approaching discard criteria",
+      "mechanism": "Falling inspection scores precede broken-wire counts and diameter loss reaching ISO 4344 discard limits.",
+      "predicted_date": "2026-09-24",
+      "days_until": 0,
+      "act_by": "2026-09-24",
+      "urgency": "PRESENT",
+      "present": true,
+      "confidence": 0.95,
+      "confidence_label": "HIGH",
+      "why": "Inspection score is already past its limit of 48 /100 (trend value today 43.2).",
+      "primary_evidence": "Condition trend - inspection score",
+      "evidence": {
+        "kind": "trend",
+        "indicator": "inspection_score",
+        "label": "Inspection score",
+        "unit": "/100",
+        "limit": 48.0,
+        "readings": [
+          {
+            "date": "2020-10-02",
+            "value": 74.4
+          },
+          {
+            "date": "2021-08-09",
+            "value": 71.1
+          },
+          {
+            "date": "2022-06-17",
+            "value": 68.2
+          },
+          {
+            "date": "2023-04-25",
+            "value": 58.2
+          },
+          {
+            "date": "2024-03-02",
+            "value": 54.8
+          },
+          {
+            "date": "2025-01-08",
+            "value": 54.7
+          },
+          {
+            "date": "2025-11-16",
+            "value": 47.9
+          },
+          {
+            "date": "2026-04-30",
+            "value": 45.1
+          }
+        ],
+        "fit": [
+          {
+            "date": "2020-10-02",
+            "value": 74.85
+          },
+          {
+            "date": "2026-09-24",
+            "value": 43.21
+          }
+        ],
+        "slope_per_year": -5.293,
+        "r2": 0.968
+      },
+      "justification": [
+        {
+          "signal": "Usage-based life model",
+          "agrees": true,
+          "detail": "81% of adjusted life used, ageing at 0.86x design; replace band already reached."
+        },
+        {
+          "signal": "AI recommendation (classifier and decision flow)",
+          "agrees": true,
+          "detail": "Current assessment: Material Recovery."
+        },
+        {
+          "signal": "Service record",
+          "agrees": true,
+          "detail": "1 repair(s) and 0 recorded failure(s) on this component."
+        }
+      ],
+      "measures": [
+        "Measure rope diameter at the most-used section against nominal",
+        "Count visible broken wires per reference length (ISO 4344)",
+        "Lubricate; order a replacement rope set now (ropes are replaced as a set)"
+      ],
+      "safety_critical": true
+    },
+    {
+      "code": "ROPE_END_OF_LIFE",
+      "title": "Rope set reaching end of usage-adjusted life",
+      "mechanism": "At the current rate of use the ropes enter the replace band.",
+      "predicted_date": "2026-09-24",
+      "days_until": 0,
+      "act_by": "2026-09-24",
+      "urgency": "PRESENT",
+      "present": true,
+      "confidence": 0.84,
+      "confidence_label": "HIGH",
+      "why": "Ageing at 0.86x the design rate with 81% of its adjusted life used, it is already in the replace band.",
+      "primary_evidence": "Usage-adjusted life model",
+      "evidence": {
+        "kind": "life",
+        "ageing_rate": 0.856,
+        "life_consumed": 0.8122,
+        "design_life_years": 12.0,
+        "factors": [
+          {
+            "label": "Usage intensity (cycles and running hours)",
+            "multiplier": 0.635
+          },
+          {
+            "label": "Load carried",
+            "multiplier": 1.291
+          },
+          {
+            "label": "Operating temperature",
+            "multiplier": 1.0
+          },
+          {
+            "label": "Vibration",
+            "multiplier": 1.0
+          },
+          {
+            "label": "Maintenance regularity",
+            "multiplier": 1.0
+          }
+        ]
+      },
+      "justification": [
+        {
+          "signal": "AI recommendation (classifier and decision flow)",
+          "agrees": true,
+          "detail": "Current assessment: Material Recovery."
+        },
+        {
+          "signal": "Service record",
+          "agrees": true,
+          "detail": "1 repair(s) and 0 recorded failure(s) on this component."
+        }
+      ],
+      "measures": [
+        "Order the replacement rope set",
+        "Schedule the rope change with the building owner"
+      ],
+      "safety_critical": true
+    },
+    {
+      "code": "ROPE_TENSION_IMBALANCE",
+      "title": "Uneven rope tension / traction irregularity",
+      "mechanism": "Rising ride vibration often means ropes are sharing load unequally.",
+      "predicted_date": "2028-08-10",
+      "days_until": 686,
+      "act_by": "2028-06-11",
+      "urgency": "PLAN_AHEAD",
+      "present": false,
+      "confidence": 0.95,
+      "confidence_label": "HIGH",
+      "why": "Vibration is rising at 0.30 mm/s per year across 8 readings (fit R² 0.94); at this rate it reaches the 5.5 mm/s limit in 23 months.",
+      "primary_evidence": "Condition trend - vibration",
+      "evidence": {
+        "kind": "trend",
+        "indicator": "vibration",
+        "label": "Vibration",
+        "unit": "mm/s",
+        "limit": 5.5,
+        "readings": [
+          {
+            "date": "2020-10-02",
+            "value": 3.24
+          },
+          {
+            "date": "2021-08-09",
+            "value": 3.5
+          },
+          {
+            "date": "2022-06-17",
+            "value": 3.44
+          },
+          {
+            "date": "2023-04-25",
+            "value": 3.85
+          },
+          {
+            "date": "2024-03-02",
+            "value": 4.05
+          },
+          {
+            "date": "2025-01-08",
+            "value": 4.67
+          },
+          {
+            "date": "2025-11-16",
+            "value": 4.56
+          },
+          {
+            "date": "2026-04-30",
+            "value": 4.89
+          }
+        ],
+        "fit": [
+          {
+            "date": "2020-10-02",
+            "value": 3.14
+          },
+          {
+            "date": "2028-08-10",
+            "value": 5.5
+          }
+        ],
+        "slope_per_year": 0.3,
+        "r2": 0.94
+      },
+      "justification": [
+        {
+          "signal": "Usage-based life model",
+          "agrees": true,
+          "detail": "81% of adjusted life used, ageing at 0.86x design; replace band already reached."
+        },
+        {
+          "signal": "AI recommendation (classifier and decision flow)",
+          "agrees": true,
+          "detail": "Current assessment: Material Recovery."
+        },
+        {
+          "signal": "Service record",
+          "agrees": true,
+          "detail": "1 repair(s) and 0 recorded failure(s) on this component."
+        }
+      ],
+      "measures": [
+        "Measure and equalise rope tensions",
+        "Check for rope slip marks on the traction sheave"
+      ],
+      "safety_critical": true
+    }
+  ],
+  "indicators": [
+    {
+      "indicator": "vibration",
+      "label": "Vibration",
+      "unit": "mm/s",
+      "limit": 5.5,
+      "points": 8,
+      "issue": "Uneven rope tension / traction irregularity",
+      "current": 4.94,
+      "slope_per_year": 0.3,
+      "r2": 0.94,
+      "status": "worsening",
+      "years_until": 1.88
+    },
+    {
+      "indicator": "inspection_score",
+      "label": "Inspection score",
+      "unit": "/100",
+      "limit": 48.0,
+      "points": 8,
+      "issue": "Rope approaching discard criteria",
+      "current": 43.21,
+      "slope_per_year": -5.293,
+      "r2": 0.968,
+      "status": "exceeded",
+      "years_until": 0.0
+    }
+  ],
+  "safety_critical": true,
+  "method": "Condition trends (least-squares over up to the last 8 service readings) extrapolated to each indicator's limit, plus the usage-adjusted life milestone. Confidence blends trend fit quality with agreement from independent signals. PROTOTYPE - synthetic service history; advisory only, it never replaces an inspection."
+}

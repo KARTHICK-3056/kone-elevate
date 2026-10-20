@@ -1,0 +1,51 @@
+# KONE ELEVATE - backend dependencies
+# Needs Python 3.12+ (numpy 2.5). Tested with 3.12 (Docker, CI) and 3.13 (local).
+# Installs use requirements.lock - see the note at the top of that file.
+
+# --- Web framework --------------------------------------------------------
+fastapi>=0.111,<1.0
+uvicorn[standard]>=0.29,<1.0
+pydantic>=2.7,<3.0
+pydantic-settings>=2.2,<3.0
+python-multipart>=0.0.9
+
+# --- Database -------------------------------------------------------------
+SQLAlchemy>=2.0.30,<3.0
+alembic>=1.13,<2.0
+psycopg2-binary>=2.9.9,<3.0   # PostgreSQL driver (Docker Compose deployment)
+
+# --- Machine learning -----------------------------------------------------
+scikit-learn>=1.5,<2.0
+pandas>=2.2,<3.0
+numpy>=1.26,<3.0
+scipy>=1.13,<2.0
+joblib>=1.4,<2.0
+
+# --- Explainability ---------------------------------------------------------
+# SHAP TreeExplainer: a second, genuinely per-prediction attribution method
+# alongside Gini/permutation importance and the design-envelope deviation view.
+shap>=0.45,<1.0
+
+# --- QR codes -------------------------------------------------------------
+qrcode[pil]>=7.4,<9.0
+pillow>=10.3
+
+# --- Configuration --------------------------------------------------------
+python-dotenv>=1.0,<2.0
+
+# --- Observability (P4) ----------------------------------------------------
+# /metrics: prediction latency, class distribution, abstention rate, chain
+# verification result.
+prometheus-client>=0.20,<1.0
+# Tracing SDK only - request/DB spans are hand-rolled in app.core.telemetry
+# rather than the auto-instrumentation packages, which pin to specific
+# FastAPI/SQLAlchemy version ranges this build's pinned versions fall
+# outside of. An OTLP endpoint is one env var away (OTEL_EXPORTER_OTLP_ENDPOINT).
+opentelemetry-api>=1.24,<2.0
+opentelemetry-sdk>=1.24,<2.0
+opentelemetry-exporter-otlp-proto-http>=1.24,<2.0
+
+# --- Testing --------------------------------------------------------------
+pytest>=8.2
+pytest-cov>=5.0
+httpx>=0.27

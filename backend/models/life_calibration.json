@@ -1,0 +1,42 @@
+{
+  "source": "data/synthetic/train.csv",
+  "method": "Median load utilisation and median service interval per component type; inspection score vs usage-model life consumed fitted by least squares.",
+  "types": {
+    "Brake": {
+      "reference_utilisation": 0.6847,
+      "service_interval_days": 271.5,
+      "rows": 1150
+    },
+    "Door Operator": {
+      "reference_utilisation": 0.6902,
+      "service_interval_days": 271.0,
+      "rows": 1550
+    },
+    "Governor": {
+      "reference_utilisation": 0.6889,
+      "service_interval_days": 272.7,
+      "rows": 873
+    },
+    "Motor": {
+      "reference_utilisation": 0.6811,
+      "service_interval_days": 260.3,
+      "rows": 1538
+    },
+    "Sheave": {
+      "reference_utilisation": 0.6813,
+      "service_interval_days": 262.7,
+      "rows": 1143
+    },
+    "Steel Rope": {
+      "reference_utilisation": 0.6851,
+      "service_interval_days": 267.9,
+      "rows": 1686
+    }
+  },
+  "inspection": {
+    "intercept": 85.66,
+    "slope": 42.37,
+    "scatter": 0.2586,
+    "rows": 2082
+  }
+}

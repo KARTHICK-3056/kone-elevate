@@ -1,0 +1,221 @@
+{
+  "_README": [
+    "Recorded KONE API responses, keyed by request path.",
+    "",
+    "Field names are copied verbatim from KONE's published TypeScript",
+    "interfaces in github.com/konecorp/kone-api-examples (src/common/types.ts,",
+    "commit e597b46, Nov 2025) - GetServiceOrder, ListServiceOrder, Status,",
+    "Availability and Movement. The VALUES are invented for this prototype;",
+    "the KEYS are KONE's.",
+    "",
+    "That split is the whole point: the adapters' mapping logic is the part",
+    "that breaks if the published schema was misread, and running it against",
+    "these keys exercises exactly that. It cannot substitute for one live",
+    "call - it will not catch a documented field the service omits, a",
+    "pagination envelope the examples do not show, or an insufficient scope.",
+    "",
+    "SO-4412884 is a PLANNED replacement with no fault - the censored case. A sheave renewed under a modernization programme is a routine KONE service order, and it is precisely where the API records that a component came out and nothing about where it went. Omitting it made the label harvester look better covered than it is."
+  ],
+  "/api/v2/equipment/ken:38999833/serviceOrders": [
+    {
+      "activityType": "PREVENTIVE_MAINTENANCE",
+      "serviceOrderNumber": "SO-4410092",
+      "customerEquipmentNumber": "CEN-0041",
+      "workOrderNumber": "WO-8830011"
+    },
+    {
+      "activityType": "CALLOUT",
+      "serviceOrderNumber": "SO-4410471",
+      "customerEquipmentNumber": "CEN-0041",
+      "workOrderNumber": "WO-8830655"
+    },
+    {
+      "activityType": "REPAIR",
+      "serviceOrderNumber": "SO-4411330",
+      "customerEquipmentNumber": "CEN-0041",
+      "workOrderNumber": "WO-8831402"
+    },
+    {
+      "activityType": "MODERNIZATION",
+      "serviceOrderNumber": "SO-4412884",
+      "customerEquipmentNumber": "CEN-0041",
+      "workOrderNumber": "WO-8832910"
+    }
+  ],
+  "/api/v2/equipment/ken:38999833/serviceOrders/SO-4410092": {
+    "activityType": "PREVENTIVE_MAINTENANCE",
+    "status": "COMPLETED",
+    "description": "Scheduled maintenance visit",
+    "actualArrivalDateTime": "2026-03-11T08:40:00Z",
+    "finishedDateTime": "2026-03-11T10:05:00Z",
+    "serviceOrderNumber": "SO-4410092",
+    "customerEquipmentNumber": "CEN-0041",
+    "workOrderNumber": "WO-8830011",
+    "jobDescription": "Routine preventive maintenance, all checks passed.",
+    "additionalCommentsToCustomer": "No action required.",
+    "equipmentFailureReason": null,
+    "failedComponentCode": null,
+    "equipmentConditionOnArrival": "2",
+    "equipmentConditionOnArrivalDesc": "OPERATIONAL",
+    "equipmentConditionOnDeparture": "1",
+    "equipmentConditionOnDepartureDesc": "GOOD",
+    "technicianActionCode": "INSPECTED",
+    "entrapment": false,
+    "workTime": 1.5,
+    "workTimeUnit": "H",
+    "technicianRegistrationNumber": "T-77301",
+    "invoices": {
+      "costAmount": 0,
+      "costCurrency": "EUR",
+      "name": "Contract covered"
+    }
+  },
+  "/api/v2/equipment/ken:38999833/serviceOrders/SO-4410471": {
+    "activityType": "CALLOUT",
+    "status": "COMPLETED",
+    "description": "Passenger entrapment callout",
+    "actualArrivalDateTime": "2026-05-02T19:12:00Z",
+    "finishedDateTime": "2026-05-02T20:40:00Z",
+    "serviceOrderNumber": "SO-4410471",
+    "customerEquipmentNumber": "CEN-0041",
+    "workOrderNumber": "WO-8830655",
+    "jobDescription": "Door operator failed to reopen; passengers released.",
+    "additionalCommentsToCustomer": "Door operator adjusted, monitoring advised.",
+    "equipmentFailureReason": "DOOR_OBSTRUCTION_FAULT",
+    "failedComponentCode": "DOOR_OPERATOR",
+    "equipmentConditionOnArrival": "4",
+    "equipmentConditionOnArrivalDesc": "OUT_OF_SERVICE",
+    "equipmentConditionOnDeparture": "2",
+    "equipmentConditionOnDepartureDesc": "OPERATIONAL",
+    "technicianActionCode": "ADJUSTED",
+    "entrapment": true,
+    "workTime": 1.5,
+    "workTimeUnit": "H",
+    "technicianRegistrationNumber": "T-77301",
+    "invoices": {
+      "costAmount": 420.5,
+      "costCurrency": "EUR",
+      "name": "Callout labour"
+    }
+  },
+  "/api/v2/equipment/ken:38999833/serviceOrders/SO-4411330": {
+    "activityType": "REPAIR",
+    "status": "COMPLETED",
+    "description": "Door operator replacement",
+    "actualArrivalDateTime": "2026-06-20T07:30:00Z",
+    "finishedDateTime": "2026-06-20T12:10:00Z",
+    "serviceOrderNumber": "SO-4411330",
+    "customerEquipmentNumber": "CEN-0041",
+    "workOrderNumber": "WO-8831402",
+    "jobDescription": "Door operator beyond adjustment, unit replaced.",
+    "additionalCommentsToCustomer": "Replacement unit fitted and commissioned.",
+    "equipmentFailureReason": "DOOR_OPERATOR_WEAR",
+    "failedComponentCode": "DOOR_OPERATOR",
+    "equipmentConditionOnArrival": "3",
+    "equipmentConditionOnArrivalDesc": "DEGRADED",
+    "equipmentConditionOnDeparture": "1",
+    "equipmentConditionOnDepartureDesc": "GOOD",
+    "technicianActionCode": "REPLACED",
+    "entrapment": false,
+    "workTime": 4.5,
+    "workTimeUnit": "H",
+    "technicianRegistrationNumber": "T-77450",
+    "invoices": {
+      "costAmount": 2180.0,
+      "costCurrency": "EUR",
+      "name": "Door operator unit + labour"
+    }
+  },
+  "/api/v2/equipment/search/status": {
+    "equipmentId": "ken:38999833",
+    "entrapment": false,
+    "outOfOrder": false,
+    "status": "OPERATIONAL",
+    "equipmentStatus": "IN_SERVICE",
+    "equipmentOutOfOrderDate": "2026-05-02T19:12:00Z",
+    "equipmentBackInOrderDate": "2026-05-02T20:40:00Z",
+    "equipmentLocationId": "LOC-CHN-114",
+    "equipmentLocationDescription": "Tower A, core 2",
+    "addressStreet": "112 Mount Road",
+    "addressPostCode": "600002",
+    "addressCity": "Chennai",
+    "addressCountry": "IN",
+    "equipmentType": "ELEVATOR",
+    "customerEquipmentLocationId": "CL-114",
+    "equipmentNumber": "38999833",
+    "customerEquipmentNumber": "CEN-0041",
+    "equipmentFunctionalLocation": "FL-CHN-114-02",
+    "equipmentFunctionalLocationDescription": "Passenger lift, low rise",
+    "maintenance": {
+      "status": "UNDER_CONTRACT"
+    }
+  },
+  "/api/v2/equipment/search/availability": {
+    "equipmentId": "ken:38999833",
+    "state": "AVAILABLE",
+    "previousState": "OUT_OF_SERVICE",
+    "activeAlertCount": 1,
+    "activeAlerts": [
+      {
+        "serviceNeedCode": "DOOR_CYCLE_DEVIATION",
+        "serviceNeedVersion": "2",
+        "activationTime": "2026-08-30T04:11:00Z",
+        "alertUUID": "5a5d6c9e-2f3b-4f2d-9a1f-0f1f6f0a2b11"
+      }
+    ],
+    "serviceMode": "NORMAL",
+    "lastUpdate": "2026-09-01T06:00:00Z"
+  },
+  "/api/v2/equipment/search/movement": {
+    "equipmentId": "ken:38999833",
+    "movementEventType": "RUN_COMPLETED",
+    "mode": "NORMAL",
+    "decks": [
+      {
+        "deckIndex": 1,
+        "startFloor": {
+          "floorIndex": 0,
+          "marking": "G"
+        },
+        "stopFloor": {
+          "floorIndex": 7,
+          "marking": "7"
+        },
+        "loadPercentage": 46,
+        "estimatedPersons": 5
+      }
+    ],
+    "durationSeconds": 22,
+    "distanceMeters": 24.5,
+    "stopMode": "NORMAL",
+    "lastUpdate": "2026-09-01T06:00:00Z"
+  },
+  "/api/v2/equipment/ken:38999833/serviceOrders/SO-4412884": {
+    "activityType": "MODERNIZATION",
+    "status": "COMPLETED",
+    "description": "Planned sheave renewal under modernization programme",
+    "actualArrivalDateTime": "2026-07-14T06:45:00Z",
+    "finishedDateTime": "2026-07-14T15:20:00Z",
+    "serviceOrderNumber": "SO-4412884",
+    "customerEquipmentNumber": "CEN-0041",
+    "workOrderNumber": "WO-8832910",
+    "jobDescription": "Traction sheave renewed as part of scheduled modernization. No fault present.",
+    "additionalCommentsToCustomer": "Planned works completed to schedule.",
+    "equipmentFailureReason": null,
+    "failedComponentCode": "TRACTION_SHEAVE",
+    "equipmentConditionOnArrival": "2",
+    "equipmentConditionOnArrivalDesc": "OPERATIONAL",
+    "equipmentConditionOnDeparture": "1",
+    "equipmentConditionOnDepartureDesc": "GOOD",
+    "technicianActionCode": "REPLACED",
+    "entrapment": false,
+    "workTime": 8.5,
+    "workTimeUnit": "H",
+    "technicianRegistrationNumber": "T-77450",
+    "invoices": {
+      "costAmount": 6120.0,
+      "costCurrency": "EUR",
+      "name": "Sheave renewal"
+    }
+  }
+}
